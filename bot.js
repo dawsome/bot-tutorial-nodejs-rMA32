@@ -5,6 +5,7 @@ var botID = process.env.BOT_ID;
 
 function respond() {
   var request = JSON.parse(this.req.chunks[0]),
+      getit = 0,
       botRegex = /^\/cool guy/; botRegexHa = /ahahahaha!/; var getit = 0;
   if(request.text && botRegex.test(request.text)) {
     this.res.writeHead(200);
@@ -14,6 +15,8 @@ function respond() {
   else if(request.text && botRegexHa.test(request.text.substring((request.text.length-10),request.text.length))) {
     this.res.writeHead(200);
     postMessage("Yes Christian you are very funny ahaha");
+    getit = Math.floor(Math.random()*11);
+    postMessage(getit);
     this.res.end();
   }
   
