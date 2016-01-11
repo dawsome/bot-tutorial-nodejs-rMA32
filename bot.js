@@ -15,7 +15,8 @@ function respond() {
   else if(request.text && botRegexHa.test(request.text.substring((request.text.length-10),request.text.length))) {
     this.res.writeHead(200);
     getit = Math.floor(Math.random()*11);
-    postMessage(getit);
+    postMessage("Yes Christian you are very funny ahaha");
+    postMessage(getit.toString());
     this.res.end();
   }
   
