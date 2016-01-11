@@ -11,7 +11,7 @@ function respond() {
     postMessage(cool());
     this.res.end();
   } 
-  else if(request.text && botRegexHa.test(request.text.substring(request.text.length-10,request.text.length)) {
+  else if(request.text && botRegexHa.test(request.text.substring(request.text.length-10,request.text.length))) {
     this.res.writeHead(200);
     postMessage("Yes Christian you are very funny ahaha");
     this.res.end();
